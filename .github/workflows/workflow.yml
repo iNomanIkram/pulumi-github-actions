@@ -32,6 +32,6 @@ jobs:
         with:
           work-dir: ./infra/project/
           command: up
-          stack-name: aws-typescript/dev # When using an individual account, only use stack-name.
+          stack-name: dev # When using an individual account, only use stack-name.
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
