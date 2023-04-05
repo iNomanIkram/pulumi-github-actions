@@ -29,8 +29,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - run: npm install
       - uses: pulumi/actions@v3
-
         with:
+          work-dir: ./infra/project/
           command: up
           stack-name: aws-typescript/dev # When using an individual account, only use stack-name.
         env:
