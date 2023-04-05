@@ -7,11 +7,15 @@ jobs:
   update:
     name: Update
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [19.0.1]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version-file: package.json
+#           node-version-file: package.json
+            node-version: ${{ matrix.node-version }}:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
