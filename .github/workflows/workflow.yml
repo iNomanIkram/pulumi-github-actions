@@ -4,13 +4,18 @@ on:
     branches:
       - main
 jobs:
+  
   update:
-    name: Update
+    name: budibase-infra
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./infra/project/
+    
     strategy:
       matrix:
         node-version: [19.8.1]
-    steps:
+    steps: 
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
@@ -24,6 +29,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - run: npm install
       - uses: pulumi/actions@v3
+
         with:
           command: up
           stack-name: dev # When using an individual account, only use stack-name.
