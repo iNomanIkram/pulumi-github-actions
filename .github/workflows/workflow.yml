@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       tags:
-        description: 'Manual Trigger' 
+#         description: 'Manual Trigger' 
 #   push:
 #     branches:
 #       - main
