@@ -7,8 +7,8 @@ on:
       - infra/project/**
       
   workflow_dispatch:
-    inputs:
-      tags:
+#     inputs:
+#       description:
 #         description: 'Manual Trigger' 
 #   push:
 #     branches:
