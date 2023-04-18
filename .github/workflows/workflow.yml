@@ -5,7 +5,8 @@ on:
       - main
     paths:
       - infra/project/**
-      - '!README.md' # to ignore Readme.md file
+    paths-ignore:
+      - '**/README.md'
       
   workflow_dispatch:
 #     inputs:
