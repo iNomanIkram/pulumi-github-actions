@@ -4,9 +4,10 @@ on:
     branches:
       - main
     paths:
-      - infra/project/**
-    paths-ignore:
-      - '**/README.md'
+      - 'infra/project/**'
+      - '!**/README.md'
+#     paths-ignore:
+#       - '**/README.md'
       
   workflow_dispatch:
 #     inputs:
