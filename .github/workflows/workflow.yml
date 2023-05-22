@@ -6,9 +6,13 @@ on:
 #   paths:
 #       - 'infra/project/**'
 #       - '!**/README.md'      
+#     paths-ignore:
+#      - '**/.*/**' # ignore any updates in hidden directories
+#      - '!**/README.md'   
     paths-ignore:
-     - '**/.*/**' # ignore any updates in hidden directories
-     - '!**/README.md'   
+      - '.github/workflows/**' 
+      - 'infra/**' 
+      - '**/README.md' 
   workflow_dispatch:
 
 jobs:
