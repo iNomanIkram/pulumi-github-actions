@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'infra/project/**'
-      - '!**/README.md'      
+#   paths:
+#       - 'infra/project/**'
+#       - '!**/README.md'      
+    paths-ignore:
+     - '!**/README.md'   
   workflow_dispatch:
 
 jobs:
