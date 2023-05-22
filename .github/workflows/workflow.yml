@@ -5,19 +5,9 @@ on:
       - main
     paths:
       - 'infra/project/**'
-      - '!**/README.md'
-#     paths-ignore:
-#       - '**/README.md'
-      
+      - '!**/README.md'      
   workflow_dispatch:
-#     inputs:
-#       description:
-#         description: 'Manual Trigger' 
-#   push:
-#     branches:
-#       - main
-#     paths:
-#       - infra/project/**
+
 jobs:
   
   update:
