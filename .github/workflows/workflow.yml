@@ -7,6 +7,7 @@ on:
 #       - 'infra/project/**'
 #       - '!**/README.md'      
     paths-ignore:
+     - '**/.*/**' # ignore any updates in hidden directories
      - '!**/README.md'   
   workflow_dispatch:
 
